@@ -1,0 +1,229 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    font-size: 62.5%;
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    font-family: "Ubuntu", "Helvetica", sans-serif;
+    font-size: 1.6rem;
+    color: #222;
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+input,
+select {
+    font: inherit;
+}
+
+
+.site-title {
+    margin: 5vh 0;
+    text-align: center;
+}
+
+
+.site-body {
+    flex-grow: 1;
+    text-align: center;
+}
+
+
+.houses-list {
+    display: flex;
+    padding: 0 10vw;
+}
+
+
+.house {
+    flex-grow: 1;
+    margin: 1rem;
+    background: transparent center center no-repeat;
+    background-size: contain;
+}
+
+.house::before {
+    content: "";
+    display: block;
+    padding-top: 100%;
+}
+
+
+.house--gryffindor {
+    background-image: url("../images/gryffindor.png");
+}
+
+.house--slytherin {
+    background-image: url("../images/slytherin.png");
+}
+
+.house--hufflepuff {
+    background-image: url("../images/hufflepuff.png");
+}
+
+.house--ravenclaw {
+    background-image: url("../images/ravenclaw.png");
+}
+
+
+.button {
+    display: inline-block;
+    padding: 1em 1.5em;
+    border: none;
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #e91e63;
+    cursor: pointer;
+}
+
+
+.add-student-button {
+    margin-top: 5vh;
+}
+
+
+.house-stats {
+    text-align: center;
+}
+
+
+.stats {
+    display: inline-block;
+    margin: 0 5rem;
+}
+
+
+.stats .label {
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #555;
+}
+
+
+.stats .value {
+    font-size: 2rem;
+}
+
+
+form {
+    text-align: center;
+}
+
+
+form p {
+    margin: 1rem;
+}
+
+
+form label {
+    display: inline-block;
+    width: 10rem;
+    text-align: left;
+}
+
+
+form input,
+form select {
+    display: inline-block;
+    width: 30rem;
+    padding: 0.5em;
+}
+
+
+form button {
+    margin-top: 1rem;
+}
+
+
+.house-page form {
+    padding: 10vh;
+}
+
+
+.house-page label {
+    display: none;
+}
+
+
+.house-page input {
+    display: block;
+    width: 30rem;
+    padding: 0.5em;
+    margin: auto;
+    font-size: 6rem;
+    text-align: center;
+}
+
+
+.students {
+    padding: 0 15vw;
+}
+
+
+.students h1 {
+    margin-bottom: 1rem;
+}
+
+
+.student {
+    display: block;
+    padding: 1em;
+    background-color: #e5e5e5;
+}
+
+.student:nth-of-type(even) {
+    background-color: #eee;
+}
+
+.student:hover {
+    color: #fff;
+    background-color: #9c27b0;
+}
+
+
+.info {
+    margin: 1rem;
+    text-align: center;
+}
+
+
+.info .label,
+.info .value {
+    display: inline-block;
+    text-align: left;
+}
+
+
+.info .label {
+    width: 10rem;
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #555;
+}
+
+
+.info .value {
+    min-width: 15rem;
+    font-size: 2rem;
+}
