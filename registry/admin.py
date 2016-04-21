@@ -1,3 +1,7 @@
 from django.contrib import admin
 
-# Register your models here.
+from registry.models import House, Student
+
+
+admin.site.register(House)
+admin.site.register(Student)
