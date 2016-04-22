@@ -7,3 +7,7 @@ class StudentForm(forms.ModelForm):
     class Meta:
         model = Student
         fields = ['name', 'birthday', 'year', 'house', 'wand']
+
+
+class PointForm(forms.Form):
+    points = forms.IntegerField()
