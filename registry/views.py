@@ -1,3 +1,9 @@
-from django.shortcuts import render
+from django.views.generic.list import ListView
 
-# Create your views here.
+from registry.models import House
+
+
+class HomeView(ListView):
+    model = House
+    queryset = House.objects.order_by('points')
+    template_name = 'registry/home.html'
