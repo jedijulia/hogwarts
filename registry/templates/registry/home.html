@@ -17,6 +17,8 @@
                     <a href="{% url 'house-detail' house.pk %}" class="house house--{{ house.name|lower }}"></a>
                 {% endfor %}
             </section>
+
+            <a href="{% url 'student-create' %}" class="button add-student-button">Add Student</a>
         </div>
     </body>
 </html>

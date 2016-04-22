@@ -8,4 +8,6 @@ urlpatterns = [
         name='house-detail'),
     url(r'^students/(?P<pk>\d+)/$', views.StudentView.as_view(),
         name='student-detail'),
+    url(r'^students/new/$', views.StudentCreateView.as_view(),
+        name='student-create')
 ]

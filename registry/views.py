@@ -1,9 +1,11 @@
 from django.views.generic.list import ListView
 from django.views.generic.base import TemplateView
 from django.views.generic.detail import DetailView
+from django.views.generic.edit import CreateView
 from django.shortcuts import get_object_or_404
 
 from registry.models import House, Student
+from registry.forms import StudentForm
 
 
 class HomeView(ListView):
@@ -27,3 +29,9 @@ class HouseView(TemplateView):
 class StudentView(DetailView):
     model = Student
     template_name = 'registry/student.html'
+
+
+class StudentCreateView(CreateView):
+    form_class = StudentForm
+    success_url = '/'
+    template_name = 'registry/student_form.html'
