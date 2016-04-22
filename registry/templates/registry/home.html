@@ -14,7 +14,7 @@
         <div class="site-body">
             <section class="list houses-list">
                 {% for house in object_list %}
-                    <a href="" class="house house--{{ house.name|lower }}"></a>
+                    <a href="{% url 'house-detail' house.pk %}" class="house house--{{ house.name|lower }}"></a>
                 {% endfor %}
             </section>
         </div>
