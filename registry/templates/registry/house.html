@@ -27,7 +27,7 @@
 
             <div class="list students-list">
                 {% for student in students %}
-                    <a href="" class="student">{{ student.name }}</a>
+                    <a href="{% url 'student-detail' student.pk %}" class="student">{{ student.name }}</a>
                 {% empty %}
                     <p class="list--empty">No students registered.</p>
                 {% endfor %}
