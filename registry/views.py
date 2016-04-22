@@ -1,5 +1,6 @@
 from django.views.generic.list import ListView
 from django.views.generic.base import TemplateView
+from django.views.generic.detail import DetailView
 from django.shortcuts import get_object_or_404
 
 from registry.models import House, Student
@@ -21,3 +22,8 @@ class HouseView(TemplateView):
         context['house'] = house
         context['students'] = students
         return context
+
+
+class StudentView(DetailView):
+    model = Student
+    template_name = 'registry/student.html'
