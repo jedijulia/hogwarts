@@ -22,6 +22,12 @@
             </p>
         </div>
 
+        <form action="{% url 'house-detail' house.pk %}" method="post">
+            {% csrf_token %}
+            {{ form }}
+            <button class="button">Points for {{ house.name }}!</button>
+        </form>
+
         <section class="students">
             <h1>Students</h1>
 
